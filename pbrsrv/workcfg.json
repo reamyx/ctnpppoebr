@@ -1,0 +1,20 @@
+{
+  "initdelay": 3,
+  "workstart": "./pbrsrvstart.sh",
+  "workwatch": 30,
+  "workintvl": 5,
+  "firewall": { "icmppermit": "yes" },
+  "pbrsrv": {
+    "actname":  "",
+    "srvname":  "",
+    "dlinif":   "",
+    "lndlif":   "",
+    "maxcnct":   "",
+    "pmacnct":   "",
+    "lnuser":   "aaa",
+    "lnpswd":   "bbb",
+    "etcdnm":   ""
+    
+  }
+}
+

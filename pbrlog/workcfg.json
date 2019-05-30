@@ -1,0 +1,17 @@
+{
+  "initdelay": 3,
+  "workstart": "./pbrsrvlogstart.sh",
+  "workwatch": 0,
+  "workintvl": 5,
+  "firewall": { "icmppermit": "yes" },
+  "pbrlog": {
+    "sqlser":     "",
+    "sqlport":    "",
+    "sqluser":    "",
+    "sqlpwd":     "",
+    "dbname":     "",
+    "rtlogs":     "",
+    "etcdnm":     ""
+  }
+}
+
