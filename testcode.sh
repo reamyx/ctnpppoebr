@@ -16,9 +16,8 @@ docker container run --detach --restart always \
 --sysctl "net.ipv4.ip_forward=1" \
 --device /dev/ppp --device /dev/net/tun \
 --volume /etc/localtime:/etc/localtime:ro \
---env "SRVCFG=$SRVCFG" \
 --dns 192.168.15.192 --dns-search local \
-registry.cn-hangzhou.aliyuncs.com/zhixia/imginit:pbrsrv;
+--env "SRVCFG=$SRVCFG" ctnpppoebr;
 docker network connect emvn "$CNM"; done
 
 docker container exec -it xxx bash
@@ -51,9 +50,8 @@ docker container run --detach --restart always \
 --name pbrlog185 --hostname pbrlog185 \
 --network imvn --cap-add NET_ADMIN \
 --volume /etc/localtime:/etc/localtime:ro \
---env "SRVNAME=pbrlog" --env "SRVCFG=$SRVCFG" \
 --ip 192.168.15.185 --dns 192.168.15.192 --dns-search local \
-registry.cn-hangzhou.aliyuncs.com/zhixia/imginit:pbrsrv
+--env "SRVNAME=pbrlog" --env "SRVCFG=$SRVCFG" ctnpppoebr
 
 docker container exec -it pbrlog185 bash
 
@@ -67,8 +65,7 @@ docker container run --detach --restart always  \
 --name pbrlog184 --hostname pbrlog184 \
 --network imvn --cap-add NET_ADMIN \
 --volume /etc/localtime:/etc/localtime:ro \
---env "SRVNAME=pbrlog" --env "SRVCFG=$SRVCFG" \
 --ip 192.168.15.184 --dns 192.168.15.192 --dns-search local \
-registry.cn-hangzhou.aliyuncs.com/zhixia/imginit:pbrsrv
+--env "SRVNAME=pbrlog" --env "SRVCFG=$SRVCFG" ctnpppoebr
 
 docker container exec -it pbrlog184 bash
