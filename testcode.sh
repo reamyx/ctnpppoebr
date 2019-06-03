@@ -3,7 +3,7 @@ exit 0
 
 #POE桥接实例,批量管理,非守护执行,因集群管理暂缺配置为持久容器
 OPT="stop"; \
-for ID in {96..127}; do CNM="poebr$ID"
+for ID in {96..96}; do CNM="poebr$ID"
 SRVCFG='{"initdelay":3,"workstart":"./pbrsrvstart.sh",
 "workwatch":"","workintvl":5,"firewall":{"icmppermit":"yes"},
 "pbrsrv":{"lnuser":"a15368400819","lnpswd":"a123456",
@@ -20,7 +20,7 @@ docker container run --detach --restart always \
 --env "SRVCFG=$SRVCFG" ctnpppoebr;
 docker network connect emvn "$CNM"; done
 
-docker container exec -it xxx bash
+docker container exec -it poebr96 bash
 
 
 #POE桥节点
